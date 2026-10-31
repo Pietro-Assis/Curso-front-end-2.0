@@ -1,0 +1,164 @@
+:root {
+  --fundo: #12131c;
+  --painel: #1c1e2b;
+  --painel-2: #252839;
+  --texto: #eceef6;
+  --suave: #9a9fb8;
+  --pipoca: #ffd166;
+  --tela: #ef476f;
+  --verde: #4cc38a;
+  --borda: #343850;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+.topo {
+  text-align: center;
+  padding: 30px 16px 22px;
+  border-bottom: 3px solid var(--tela);
+}
+.topo h1 { margin: 0 0 6px; color: var(--pipoca); }
+.topo p  { margin: 0; color: var(--suave); }
+
+.conteudo {
+  max-width: 1040px;
+  margin: 28px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.painel {
+  background: var(--painel);
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid var(--borda);
+}
+.painel h2 { margin-top: 0; }
+
+/* ---------- FORMULÁRIO ---------- */
+form label { display: block; font-weight: 600; margin-top: 14px; }
+
+input, select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  background: var(--painel-2);
+  color: var(--texto);
+  font-size: 1rem;
+  font-family: inherit;
+}
+input:focus, select:focus { outline: none; border-color: var(--pipoca); }
+
+#btn-adicionar {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--tela);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+#btn-adicionar:hover { filter: brightness(1.1); }
+
+.mensagem { min-height: 22px; margin: 12px 0 0; font-weight: 600; }
+.mensagem.sucesso { color: var(--verde); }
+.mensagem.erro    { color: var(--tela); }
+
+.btn-sortear {
+  width: 100%;
+  margin-top: 18px;
+  padding: 10px;
+  border: 2px dashed var(--pipoca);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--pipoca);
+  font-weight: 700;
+  cursor: pointer;
+}
+.sorteado { min-height: 22px; text-align: center; color: var(--pipoca); font-weight: 700; }
+
+/* ---------- LISTA ---------- */
+.badge {
+  display: inline-block;
+  min-width: 28px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--tela);
+  color: #fff;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.ferramentas {
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr 1fr;
+  gap: 8px;
+}
+.ferramentas input, .ferramentas select { margin-top: 0; font-size: .9rem; padding: 9px 8px; }
+
+#lista-vazia { color: var(--suave); font-style: italic; }
+.escondido { display: none; }
+
+#lista-filmes { list-style: none; margin: 16px 0 0; padding: 0; }
+
+/* O card do filme é criado pelo JS: <li class="filme"> */
+.filme {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-left: 5px solid var(--pipoca);
+  border-radius: 8px;
+  background: var(--painel-2);
+}
+/* a ordem visual não depende da ordem em que o JS cria os elementos */
+.filme-titulo { order: 1; flex: 1 1 auto; font-size: 1.05rem; }
+.filme-nota   { order: 2; color: var(--pipoca); letter-spacing: 2px; }
+.filme-info   { order: 3; flex: 0 0 100%; color: var(--suave); font-size: .9rem; }
+.filme button { order: 4; margin-top: 4px; }
+
+/* Filme assistido: o JS adiciona a classe "assistido" */
+.filme.assistido { border-left-color: var(--verde); opacity: .75; }
+.filme.assistido .filme-titulo { text-decoration: line-through; }
+
+.btn-assistir, .btn-remover {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-assistir { border: 1px solid var(--verde); color: var(--verde); }
+.btn-assistir:hover { background: var(--verde); color: #12131c; }
+.btn-remover { border: 1px solid var(--tela); color: var(--tela); }
+.btn-remover:hover { background: var(--tela); color: #fff; }
+
+.resumo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 2px dashed var(--borda);
+}
+
+@media (max-width: 760px) {
+  .conteudo { grid-template-columns: 1fr; }
+  .ferramentas { grid-template-columns: 1fr; }
+}

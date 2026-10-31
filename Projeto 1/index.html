@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria pao</title>
+    <link rel="stylesheet" href="/Projeto 1/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="cabeçalho">
+        <div class="container cabeçalho-conteudo">
+            <a href="#inicio" class="logo">Padaria pao</a>
+        </div>
+        <nav>
+            <a href="#inicio">inicio</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#pedido">Faça seu pedido</a>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-conteudo">
+                <div>
+                    <span class="etiqueta">café feito na hora</span>
+                    <h1>Pãodaria de borraheiro de código</h1>
+                    <p>pães quentinhos, café forte para combinar com sua sessão de programação</p>
+                    <a href="#pedido" class="botão">Montar seu Pedido</a>
+                </div>
+                <div>
+                    <span>a</span>
+                    <h2>Combo da madrugada</h2>
+                    <p>Tinta de impressora + pão na chapa</p>
+                    <strong>RS 23,00</strong>
+                </div>
+            </div>
+        </section>
+        <section id="beneficios" class="sessao">
+            <div class="container">
+                <span class="etiqueta">Porquê escolher a nossa padaria</span>
+                <h2>Ambiente pronto para você desenvolver seu sistema, junto da tinta de impressora de mais alta qualidade</h2>
+                <p class="descrição">Motivos que nossos clientes voltam</p>
+                <ul id="listar beneficios" class="grid-beneficios"><!-- Definido pelo javascript --></ul>
+            </div>
+        </section>
+        <section id="produtos" class="secao secao-clara">
+            <div class="container">
+                <span class="etiqueta">favoritos</span>
+                <h2>produto mais pedidos</h2>
+                <div id="listarProdutos" class="grid-produtos"><!-- Definido pelo javascript --></div>
+            </div>
+        </section>
+        <section id="pedido" class="secao">
+            <div class="container pedido-area">
+                <div>
+                    <span class="etiqueta">Faça seu pedido</span>
+                    <h2>Preço</h2>
+                    <p class="descrição" id=""> <!-- nesse p o JS vai preencher com o valor da compra sem atualizar a página (F5) -->escolha o produto, e a quantidade
+                    </p>
+                    <form id="formPedido">
+                        <div class="campo">
+                            <label for="nome">seu nome</label>
+                            <input type="text" id="nome" placeholder="Digite seu nome">
+                        </div>
+                        <div class="campo">
+                            <label for="produto">Selecione o produto</label>
+                            <select id="produto">
+                                <option value="">Selecione um produto</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="quantidade">Quantidade do produto</label>
+                            <input type="number" name="" id="quantidade" min="1" value="1">
+                        </div>
+                        <button type="submit" class="botao">Calcular pedido</button>
+                    </form>
+                    <p id="mensagem" class="mensagem"><!-- aqui o JS ira preencher com nosso pedido, tanto se der certo ou errado --></p>
+                    <div id="resultado" class="resultado" aria-live="polite"></div>
+                </div>
+                <div class="pedido-ilustracao">
+                    <div class="pao-grande">🍞</div>
+                    <h3>Café precisa de algo especial</h3>
+                    <p>escolha um dos seu favoritos</p>
+                </div>
+            </div>
+        </section>
+        <footer class="rodape">
+            <div class="container">
+                <strong>Pão e tinta de impressora</strong>
+                <p>rua dos pães n123</p>
+                <p>@2026 Padaria Tito</p>
+            </div>
+        </footer>
+    </main>
+    <script src="/Projeto 1/js/script.js"></script>
+</body>
+</html>
+<!-- -->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural Interativo</title>
+    <link rel="stylesheet" href="/Projeto 2.1/CSS/Style.css">
+</head>
+<body>
+    <header class="topo">
+        <div>
+            <h1>Mural Interativo</h1>
+            <p>Crie Ideias e organize seu mural</p>
+        </div>
+        <button id="btnTema" type="button">Tema Escuro</button>
+    </header>
+    <main class="container">
+        <section class="painel">
+        <label for="campoIdeia">Nova Ideia</label>
+        <div class="linha-form">
+            <input id="campoIdeia" maxlength="80" placeholder="Ex: criar uma página de portfólio">
+            <BUTton id="btnAdicionar" type="button">Adicionar card</BUTton>
+        </div>
+        <p id="mensagem" aria-live="polite"></p>
+    </section>
+
+    <p><strong id="contador">0</strong></p>
+    <section id="mural" class="mural"></section>
+    <script src="/Projeto 2.1/js/Script1.js"></script>
+    </main>
+</body>
+</html>

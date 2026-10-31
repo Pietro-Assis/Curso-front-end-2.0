@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineLista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>🎬 CineLista</h1>
+    <p>Os filmes que você quer ver, num lugar só.</p>
+  </header>
+
+  <main class="conteudo">
+
+    <!-- FORMULÁRIO: adicionar filme -->
+    <section class="painel">
+      <h2>Adicionar filme</h2>
+
+      <form id="form-filme">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" placeholder="Ex.: Divertida Mente">
+
+        <label for="genero">Gênero</label>
+        <select id="genero">
+          <option value="Animação">Animação</option>
+          <option value="Aventura">Aventura</option>
+          <option value="Comédia">Comédia</option>
+          <option value="Drama">Drama</option>
+          <option value="Ficção científica">Ficção científica</option>
+          <option value="Terror">Terror</option>
+        </select>
+
+        <label for="ano">Ano</label>
+        <input type="number" id="ano" placeholder="Ex.: 2015">
+
+        <label for="nota">Interesse</label>
+        <select id="nota">
+          <option value="5">★★★★★ Quero muito</option>
+          <option value="4">★★★★☆</option>
+          <option value="3" selected>★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆ Talvez</option>
+        </select>
+
+        <button type="submit" id="btn-adicionar">Adicionar à lista</button>
+      </form>
+
+      <p id="mensagem" class="mensagem"></p>
+
+      <!-- DESAFIO: sorteio -->
+      <button type="button" id="btn-sortear" class="btn-sortear">🎲 Sortear um filme para hoje</button>
+      <p id="sorteado" class="sorteado"></p>
+    </section>
+
+    <!-- LISTA DE FILMES -->
+    <section class="painel">
+      <h2>Minha lista <span class="badge" id="contador">0</span></h2>
+
+      <div class="ferramentas">
+        <input type="search" id="busca" placeholder="🔎 Buscar pelo título">
+        <select id="filtro-genero">
+          <option value="">Todos os gêneros</option>
+          <option value="Animação">Animação</option>
+          <option value="Aventura">Aventura</option>
+          <option value="Comédia">Comédia</option>
+          <option value="Drama">Drama</option>
+          <option value="Ficção científica">Ficção científica</option>
+          <option value="Terror">Terror</option>
+        </select>
+        <select id="filtro-status">
+          <option value="todos">Todos</option>
+          <option value="pendentes">Para assistir</option>
+          <option value="assistidos">Assistidos</option>
+        </select>
+      </div>
+
+      <p id="lista-vazia">Nenhum filme encontrado.</p>
+
+      <!-- Os cards são criados pelo JavaScript a partir do vetor de filmes -->
+      <ul id="lista-filmes"></ul>
+
+      <div class="resumo">
+        <span>Assistidos: <strong id="total-assistidos">0</strong></span>
+        <span>Interesse médio: <strong id="media">–</strong></span>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

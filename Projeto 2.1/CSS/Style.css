@@ -1,0 +1,14 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    background: #e7e1e1de;
+    color: #18202d;
+}
+.tema-escuro {
+    background: #101521;
+    color: #f5f7fa;
+}

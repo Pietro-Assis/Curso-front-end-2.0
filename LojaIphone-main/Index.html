@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NimbusPhone 15 — Ele quase voa</title>
+  <link rel="stylesheet" href="/LojaIphone-main/CSS/Style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Nimbus<span>Phone</span></div>
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menu">☰</button>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="#recursos">Recursos</a>
+      <a href="#cores">Cores</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <button id="btn-tema" class="btn-tema">🌙 Modo escuro</button>
+  </header>
+
+  <section class="hero">
+    <h1>NimbusPhone 15</h1>
+    <p class="tagline">Tão rápido que a bateria nem percebe.</p>
+    <div class="estoque">
+      <span id="qtd-estoque">7</span> unidades restantes
+    </div>
+    <button id="btn-comprar" class="btn-comprar">Comprar agora</button>
+  </section>
+
+  <section id="cores" class="secao secao-cores">
+    <h2>Escolha a cor</h2>
+    <div class="aparelho" id="aparelho"></div>
+    <p>Cor selecionada: <span id="nome-cor">Cinza Nimbus</span></p>
+    <div class="swatches">
+      <button class="swatch" data-cor="Cinza Nimbus" style="background:#8a8d9c" aria-label="Cinza Nimbus"></button>
+      <button class="swatch" data-cor="Azul Tempestade" style="background:#3b6ea5" aria-label="Azul Tempestade"></button>
+      <button class="swatch" data-cor="Rosa Nuvem" style="background:#e39ab0" aria-label="Rosa Nuvem"></button>
+      <button class="swatch" data-cor="Verde Vento" style="background:#5fa87f" aria-label="Verde Vento"></button>
+    </div>
+  </section>
+
+  <section id="recursos" class="secao secao-recursos">
+    <h2>Por que comprar</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Câmera Nimbus</h3>
+        <p>Tira fotos tão boas que até a nuvem fica com inveja.</p>
+      </div>
+      <div class="card">
+        <h3>Bateria eterna</h3>
+        <p>Dura o dia inteiro, desde que você não abra nenhum aplicativo.</p>
+      </div>
+      <div class="card">
+        <h3>Tela infinita</h3>
+        <p>Quase sem bordas. As que sobraram, a gente escondeu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="avaliacoes" class="secao secao-avaliacoes">
+    <h2>Avaliações</h2>
+    <div class="estrelas" id="estrelas">
+      <span class="estrela" data-valor="1">★</span>
+      <span class="estrela" data-valor="2">★</span>
+      <span class="estrela" data-valor="3">★</span>
+      <span class="estrela" data-valor="4">★</span>
+      <span class="estrela" data-valor="5">★</span>
+    </div>
+    <p id="texto-avaliacao">Clique em uma estrela para avaliar</p>
+
+    <div class="comentario-box">
+      <label for="comentario">Deixe seu comentário:</label>
+      <textarea id="comentario" maxlength="120" placeholder="Conte o que achou do NimbusPhone..."></textarea>
+      <p class="contador"><span id="contador-caracteres">0</span>/120 caracteres</p>
+    </div>
+  </section>
+
+  <section id="duvidas" class="secao secao-duvidas">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-item">
+      <button class="faq-pergunta">O NimbusPhone realmente voa?</button>
+      <p class="faq-resposta">Ainda não, mas nossos engenheiros estão otimistas.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-pergunta">Qual a garantia?</button>
+      <p class="faq-resposta">1 ano contra defeitos de fabricação e crises existenciais.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-pergunta">Posso pagar com nuvens?</button>
+      <p class="faq-resposta">Só se forem bem carregadinhas.</p>
+    </div>
+  </section>
+
+  <section class="secao secao-magica">
+    <h2>Caixa mágica</h2>
+    <p>Digite alguma coisa gentil aqui dentro...</p>
+    <input type="text" id="input-magico" placeholder="Digite algo...">
+  </section>
+
+  <footer class="footer">
+    <p>Assine nossa newsletter</p>
+    <div class="newsletter">
+      <input type="email" id="input-email" placeholder="seu@email.com">
+      <button id="btn-assinar">Assinar</button>
+    </div>
+    <p class="copy">© NimbusPhone — projeto fictício, criado para fins didáticos.</p>
+  </footer>
+
+  <script src="/LojaIphone-main/JavaScript/Script.js"></script>
+</body>
+</html>

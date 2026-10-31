@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #10131f;
+  color: #e9ecf5;
+  min-height: 100vh;
+}
+ 
+.topo {
+  text-align: center;
+  padding: 32px 16px 16px;
+}
+ 
+.topo h1 {
+  font-size: 2.4rem;
+}
+ 
+.topo h1 span {
+  color: #7fd1ae;
+}
+ 
+.topo p {
+  color: #9aa3c0;
+  margin-top: 4px;
+}
+ 
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+ 
+.controles input, .controles select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #2c3354;
+  background: #1a1f33;
+  color: #e9ecf5;
+  font-size: 1rem;
+}
+ 
+ 
+.controles input {
+  width: 280px;
+}
+ 
+#placar {
+  color: #f5c96a;
+  font-weight: bold;
+}
+ 
+.aviso {
+  text-align: center;
+  color: #9aa3c0;
+  margin: 12px;
+}
+ 
+.aviso.erro {
+  color: #ff7a8a;
+}
+ 
+ 
+.geladeira {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 16px 32px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+.pipoca {
+  background: #1a1f33;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+ 
+ 
+.pipoca:hover {
+  transform: translateY(-6px);
+}
+ 
+ 
+.pipoca img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+ 
+.pipoca .dados {
+  padding: 10px 12px 14px;
+}
+ 
+.pipoca h3 {
+  font-size: 1rem;
+}
+ 
+.pipoca small {
+  color: #9aa3c0;
+  display: block;
+  margin: 2px 0 8px;
+}
+ 
+.nota {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #10131f;
+}
+ 
+.nota-alto {
+  background: #7fd1ae;
+}
+ 
+.nota-media {
+  background: #f5c96a;
+}
+ 
+.nota-baixa {
+  background: #ff7a8a;
+}
+ 
+.fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+ 
+.fundo.oculto {
+  display: none;
+}
+ 
+.caixa {
+  background: #1a1f33;
+  border-radius: 14px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+ 
+.caixa img {
+  width: 100%;
+  display: block;
+}
+ 
+.caixa h2, .caixa p {
+  padding: 0 20px;
+}
+ 
+.caixa h2 {
+  margin-top: 16px;
+}
+ 
+.caixa .info {
+  color: #f5c96a;
+  margin: 6px 0 12px;
+}
+ 
+#p-texto {
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+ 
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #ff7a8a;
+  color: #10131f;
+  font-weight: bold;
+  cursor: pointer;
+}
+ 
+ 
+ 

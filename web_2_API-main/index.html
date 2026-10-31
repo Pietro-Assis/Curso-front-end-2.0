@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine Ghibli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Cine <span>Ghibli</span></h1>
+    <p>Os filmes do Studio Ghibli direto da API</p>
+  </header>
+ 
+  <section class="controles">
+    <input type="text" id="pesquisa" placeholder="Buscar pelo título...">
+    <select id="gaveta">
+      <option value="ano">Mais antigos primeiro</option>
+      <option value="nota">Maior nota primeiro</option>
+      <option value="titulo">Título (A-Z)</option>
+    </select>
+    <span id="placar">0 filmes</span>
+  </section>
+ 
+  <p id="aviso" class="aviso">Carregando filmes...</p>
+  <main id="geladeira" class="geladeira"></main>
+ 
+  <div id="portao" class="fundo oculto">
+    <div class="caixa">
+      <button id="fechar" class="fechar">X</button>
+      <img id="p-banner" src="" alt="Cena do filme">
+      <h2 id="p-titulo"></h2>
+      <p id="p-info" class="info"></p>
+      <p id="p-texto"></p>
+    </div>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
+ 

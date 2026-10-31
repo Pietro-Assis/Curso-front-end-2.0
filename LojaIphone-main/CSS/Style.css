@@ -1,0 +1,331 @@
+/* ---------- Variáveis e tema ---------- */
+:root {
+  --bg: #f4f8fc;
+  --text: #1f2937;
+  --muted: #5b6472;
+  --primary: #3b6ea5;
+  --primary-dark: #2c5480;
+  --card-bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --border: #e0e6ee;
+}
+
+body.modo-escuro {
+  --bg: #11141f;
+  --text: #f1f4fb;
+  --muted: #a7adc2;
+  --primary: #6fa8dc;
+  --primary-dark: #8fbdea;
+  --card-bg: #1b2033;
+  --header-bg: rgba(17, 20, 31, 0.92);
+  --border: #2b2f45;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 { font-family: "Segoe UI", Arial, sans-serif; margin: 0 0 0.5rem; }
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--header-bg);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo { font-size: 1.3rem; font-weight: 700; }
+.logo span { color: var(--primary); }
+
+.btn-menu {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-menu.aberta { display: flex; }
+
+.nav-menu a {
+  padding: 0.9rem 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  border-top: 1px solid var(--border);
+}
+
+.btn-tema {
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 780px) {
+  .btn-menu { display: none; }
+  .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    border: none;
+  }
+  .nav-menu a { border-top: none; padding: 0 1rem; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.hero h1 { font-size: 2.6rem; }
+
+.tagline { color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+.estoque {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+#qtd-estoque { font-weight: 700; color: var(--primary); }
+
+.btn-comprar {
+  display: block;
+  margin: 0 auto;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-comprar:disabled {
+  background: #b3bac6;
+  cursor: not-allowed;
+}
+
+/* ---------- Seções genéricas ---------- */
+.secao {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.secao h2 { font-size: 1.7rem; margin-bottom: 1.8rem; }
+
+/* ---------- Cores do aparelho ---------- */
+.aparelho {
+  width: 110px;
+  height: 220px;
+  margin: 0 auto 1rem;
+  border-radius: 22px;
+  background: #8a8d9c;
+  border: 6px solid var(--card-bg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+
+.swatches {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  cursor: pointer;
+}
+
+/* ---------- Recursos ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.4rem;
+}
+
+.card h3 { font-size: 1.05rem; color: var(--primary); }
+.card p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+/* ---------- Avaliações ---------- */
+.estrelas { font-size: 2rem; margin-bottom: 0.5rem; }
+
+.estrela { color: #cbd2dc; cursor: pointer; padding: 0 0.1rem; }
+.estrela.cheia { color: #f5b301; }
+
+#texto-avaliacao { color: var(--muted); margin-bottom: 2rem; }
+
+.comentario-box {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.comentario-box label { display: block; margin-bottom: 0.4rem; font-size: 0.95rem; }
+
+#comentario {
+  width: 100%;
+  min-height: 90px;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contador { color: var(--muted); font-size: 0.85rem; text-align: right; margin-top: 0.3rem; }
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.faq-pergunta {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1rem 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.faq-resposta {
+  display: none;
+  margin: 0 0 1rem 0.2rem;
+  color: var(--muted);
+}
+
+.faq-resposta.aberta { display: block; }
+
+/* ---------- Caixa mágica ---------- */
+.secao-magica input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
+
+body.piscando {
+  animation: piscar 0.5s infinite;
+}
+
+body.piscapisca
+{
+  background-color: rgb(255,0,0)
+}
+body.piscapisca3
+{
+  background-color: rgb(0, 0, 255);
+}
+body.piscapisca2
+{
+  background-color: rgb(0, 255, 00);
+}
+
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.5rem;
+}
+
+.newsletter input {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  min-width: 220px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+.newsletter button {
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newsletter button:disabled {
+  background: #b3bac6;
+  cursor: not-allowed;
+}
+
+.copy { color: var(--muted); font-size: 0.8rem; }
