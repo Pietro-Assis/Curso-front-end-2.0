@@ -1,72 +1,245 @@
+/* Padrãodrãodrão */
 *
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-html{scroll-behavior: smooth;}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+/* Animações */
 @keyframes hover-effect {
     from {transform: scale(1);}
     to { transform: scale(1.25);}
 }
-@keyframes suaveNaNave {
-
-}
-.body {
+ 
+ 
+/* Body Splash */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: #222222;
+    min-height: 100vh;
     display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column
-}
-header{
-    padding: 15px;
-}
-.h1 {
-    text-align: center;
-}
-.nav{
-    display: flex;
-    justify-content: space-evenly;
-    min-width: 100%;
     flex-direction: column;
 }
+ 
+ 
+/* Header */
+header{
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+ 
+.h1 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+ 
+.Titulo h2 {
+    font-size: 1rem;
+    color: #555555;
+ 
+}
+ 
+/* Nav */
+ 
+.div-das-navs {
+    margin-top: 10px;
+    text-align: center;
+}
+ 
+.botaoHamburgo {
+    font-size: 1.4rem;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+ 
+.botaoHamburgo:hover {
+    transform: scale(105%);
+    transition: ease 0.15s;
+}
+ 
+/* Menu */
+ 
+.nav{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+ 
 .nav-item{
     text-decoration: none;
-    color: black;
+    color: #202020;
     font-weight: bold;
 }
-.card-section{
-    margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
+ 
+.nav.item:hover {
+    text-decoration: underline;
 }
-.card-container{
-    max-width: 175px;
-    padding: 10px;
+ 
+.escondido {
+    display: none;
 }
-.card-container:hover {
-    animation: hover-effect .20s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-.card-image{
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-.card-p{
-    text-align: center;
-}
-.texto-chato{
-    text-align: center;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
+ 
+.tema {
+    padding: 5px 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: #eee;
+    cursor: pointer;
+    font-weight: bold;
 }
 
+ 
+/* Cards */
+ 
+.main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ 
+.card-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.card-container{
+    max-width: 40%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+ 
+.card-container:hover {
+    transform: scale(105%);
+}
+
+.card-image{
+    max-width: 400px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+ 
+.card-p{
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Botaos */
+
+#trocar {
+    margin: 15px 0;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(252, 206, 0);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.123);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Contador */
+
+.contador {
+    text-align: center;
+    background-color: #dfdfdf;
+    width: 100%;
+    border-radius: 6px;
+    border-left: #393a3b 1px solid;
+    border-bottom: #393a3b 1px solid;
+    font-weight: bold;
+    padding: 5px 10px;
+    max-width: 300px;
+}
+ 
+/* Texto */
+.texto-chato{
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 30px 0;
+}
+
+.p-texto {
+    margin-top: 200px;
+}
+ 
+/* Footer */
+ 
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 15px;
+}
+ 
+.footer a {
+    color: #202122;
+}
+ 
+ 
+/* Tema escuro */
 .escuro{
     background-color: #202122;
     color: #eaecf0;
 }
-.escondido {
-    transform: scale(0);
+ 
+.escuro header, .escuro .footer, .escuro .card-container {
+    background-color: #393a3b;
+    border-color: #585858;
+}
+ 
+.escuro .Titulo h2 {
+    color: #a3a3a3;
+}
+ 
+.escuro .nav-item, .escuro .footer a {
+    color: #eaecf0;
+}
+ 
+.escuro .botaoHamburgo, .escuro .tema {
+    background-color: #39393b;
+    color: #eaecf0;
+    border-color: #575757;
+}
+ 
+.escuro .tema {
+    border: 1px solid #727272;
+    background-color: #9b9b9b;
+    color: #202122;
+    font-weight: bold;
+}
+ 
+/* Pa compiuter */
+ 
+@media (min-width: 700px) {
+    .botaoHamburgo {
+        display: none;
+    }
+ 
+    .nav, .nav.escondido {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+    }
 }
